@@ -1,0 +1,3 @@
+{
+	"recommendations": ["dbaeumer.vscode-eslint", "irongeek.vscode-env", "esbenp.prettier-vscode", "stylelint.vscode-stylelint"]
+}

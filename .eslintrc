@@ -1,0 +1,44 @@
+{
+	"env": { "browser": true, "es2021": true },
+	"extends": ["plugin:react/recommended", "plugin:import/recommended", "plugin:import/typescript", "prettier"],
+	"plugins": ["react", "react-hooks", "prettier", "unused-imports"],
+	"parser": "@typescript-eslint/parser",
+	"ignorePatterns": ["**/*.stories.*"],
+	"parserOptions": {
+		"ecmaFeatures": { "jsx": true },
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"settings": {
+		"react": { "version": "detect" },
+		"import/resolver": {
+			"alias": {
+				"map": [["@app", "./src"]],
+				"extensions": [".ts", ".tsx", ".js", ".jsx", ".json"]
+			}
+		}
+	},
+	"rules": {
+		"import/default": 0,
+		"eqeqeq": ["warn", "always"],
+		"unused-imports/no-unused-vars": "warn",
+		"unused-imports/no-unused-imports": "warn",
+		"react/react-in-jsx-scope": 0,
+		"react/prop-types": 0,
+		"react-hooks/exhaustive-deps": "warn",
+		"func-style": ["warn", "declaration"],
+		"prettier/prettier": ["warn", { "printWidth": 175 }],
+		"require-jsdoc": [
+			"warn",
+			{
+				"require": {
+					"FunctionDeclaration": true,
+					"MethodDefinition": false,
+					"ClassDeclaration": false,
+					"ArrowFunctionExpression": false,
+					"FunctionExpression": false
+				}
+			}
+		]
+	}
+}

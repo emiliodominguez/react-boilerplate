@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"strictPropertyInitialization": false,
+		"downlevelIteration": true,
+		"paths": {
+			"@app/*": ["./src/*"]
+		}
+	},
+	"exclude": ["node_modules"]
+}

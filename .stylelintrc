@@ -1,0 +1,28 @@
+{
+	"extends": ["stylelint-config-standard", "stylelint-config-prettier", "stylelint-config-standard-scss", "stylelint-config-prettier-scss"],
+	"rules": {
+		"indentation": null,
+		"string-quotes": "single",
+		"color-hex-case": "lower",
+		"color-hex-length": "long",
+		"color-named": "never",
+		"declaration-block-semicolon-newline-after": "always",
+		"block-opening-brace-newline-after": "always",
+		"at-rule-empty-line-before": ["always", { "ignore": ["inside-block", "after-comment", "first-nested", "blockless-after-same-name-blockless"] }],
+		"rule-empty-line-before": ["always", { "ignore": ["after-comment", "first-nested"] }],
+		"selector-class-pattern": null,
+		"selector-max-empty-lines": 0,
+		"custom-property-pattern": null,
+		"value-keyword-case": null,
+		"no-duplicate-selectors": true,
+		"color-no-invalid-hex": true,
+		"property-no-unknown": true,
+		"function-no-unknown": null,
+		"no-descending-specificity": null,
+
+		"scss/dollar-variable-empty-line-before": null,
+		"scss/dollar-variable-pattern": null,
+		"scss/at-function-pattern": null,
+		"scss/percent-placeholder-pattern": null
+	}
+}
