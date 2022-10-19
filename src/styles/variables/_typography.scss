@@ -1,0 +1,34 @@
+@use '../shared/functions';
+
+// ====================
+// Typography
+// ====================
+
+// Heading
+$_heading: (
+	xxs: 12px,
+	xs: 14px,
+	s: 16px,
+	m: 18px,
+	l: 20px,
+	xl: 24px,
+	xxl: 28px
+);
+
+// Paragraph
+$_paragraph: (
+	xs: 12px,
+	s: 14px,
+	m: 16px,
+	l: 18px,
+	xl: 20px
+);
+
+$_typography: (
+	heading: $_heading,
+	paragraph: $_paragraph
+);
+
+@function typography($map-key, $key) {
+	@return functions.get-from-map(functions.get-from-map($_typography, $map-key), $key);
+}

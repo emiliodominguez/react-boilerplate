@@ -1,0 +1,15 @@
+@use '../shared/functions';
+
+$_z-index: (
+	negative: -1,
+	basic: 1,
+	lowest: 5,
+	low: 25,
+	intermediate: 50,
+	high: 75,
+	important: 100
+);
+
+@function z-index($key) {
+	@return functions.get-from-map($_z-index, $key);
+}

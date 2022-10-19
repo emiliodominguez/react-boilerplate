@@ -1,3 +1,5 @@
+import '../src/styles/main.scss';
+
 export const parameters = {
 	layout: 'fullscreen',
 	actions: {

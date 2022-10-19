@@ -24,8 +24,9 @@ Besides those files this is a detailed view of the main project structure.
     │   └── components      # Application components
     │   │   └──App          # The main entry component
     │   └── hooks           # Application hooks
-    │	└── ...
-    └── ...                 # Project and configuration files
+    │   └── styles          # Application styles
+    │   └── ...
+    └── ...                 # Project files
 
 ## Available scripts
 

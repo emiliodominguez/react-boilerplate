@@ -1,0 +1,14 @@
+@use '@app/styles/variables';
+
+.main {
+	display: flex;
+	min-height: 100vh;
+	padding: 25px;
+	background-color: var(--mono1000);
+	color: var(--mono100);
+
+	h1 {
+		margin: auto;
+		font-weight: variables.font-weight(light);
+	}
+}

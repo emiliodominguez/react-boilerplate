@@ -1,0 +1,16 @@
+@use '../shared/functions';
+
+$_sizes: (
+	xs: 4px,
+	s: 8px,
+	i: 12px,
+	m: 16px,
+	l: 24px,
+	xl: 32px,
+	xxl: 48px,
+	xxxl: 64px
+);
+
+@function size($key) {
+	@return functions.get-from-map($_sizes, $key);
+}
