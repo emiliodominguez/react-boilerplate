@@ -21,10 +21,11 @@ describe('Colors helpers', () => {
 			const invalidHex = '#fff0000';
 
 			// When
-			const result = () => helpers.hexToRgb(invalidHex);
+			// eslint-disable-next-line func-style
+			const helperCall = () => helpers.hexToRgb(invalidHex);
 
 			// Then
-			expect(result).toThrowError();
+			expect(helperCall).toThrow();
 		});
 	});
 

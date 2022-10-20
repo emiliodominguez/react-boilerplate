@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Grid as GridComponent, Col } from '.';
 
 export default {
-	title: 'UI/Grid',
+	title: 'Library/Grid',
 	argTypes: {
 		gap: {
 			control: { type: 'number', min: 0 }

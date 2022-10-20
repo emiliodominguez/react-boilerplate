@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Select as SelectComponent } from '.';
 
 export default {
-	title: 'UI',
+	title: 'Library',
 	args: {
 		placeholder: 'Select an option',
 		showCounterPlaceholder: true,

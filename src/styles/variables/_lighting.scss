@@ -1,0 +1,32 @@
+@use '../shared/functions';
+
+// ====================
+// Lighting
+// ====================
+
+// Shadow
+$_shadows: (
+	400: 0 1px 4px,
+	500: 0 2px 8px,
+	600: 0 4px 16px,
+	700: 0 8px 24px
+);
+
+@function shadow($key) {
+	@return functions.get-from-map($_shadows, $key) hsla(0, 0%, 0%, 0.16);
+}
+
+// Overlay
+$_overlays: (
+	0: 0,
+	100: 0.04,
+	200: 0.08,
+	300: 0.12,
+	400: 0.16,
+	500: 0.2,
+	600: 0.24
+);
+
+@function overlay($key) {
+	@return inset 0 0 0 1000px hsla(0, 0%, 0%, functions.get-from-map($_overlays, $key));
+}

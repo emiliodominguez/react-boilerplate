@@ -1,0 +1,77 @@
+@use '@app/styles/variables';
+@use '@app/styles/shared';
+
+.toast {
+	$offset: 25px;
+
+	position: fixed;
+	left: 50%;
+	bottom: var(--toast-vertical-offset, $offset);
+	right: $offset;
+	display: flex;
+	align-items: center;
+	width: calc(100% - #{$offset * 2});
+	max-width: var(--toast-max-width);
+	gap: variables.size(m);
+	padding: variables.size(m);
+	font-size: variables.typography(label, s);
+	font-weight: variables.font-weight(bold);
+	transform: translateX(-50%);
+	z-index: variables.z-index(important);
+
+	&.toTop {
+		top: var(--toast-vertical-offset, $offset);
+		bottom: unset;
+	}
+
+	&.danger,
+	&.success {
+		&,
+		button {
+			color: var(--mono100);
+		}
+	}
+
+	&.warning {
+		background-color: var(--warning);
+
+		&,
+		button {
+			color: var(--mono1000);
+		}
+	}
+
+	&.danger {
+		background-color: var(--negative400);
+	}
+
+	&.success {
+		background-color: var(--positive500);
+	}
+
+	span {
+		line-height: 1.5;
+
+		+ button {
+			margin-left: auto;
+		}
+	}
+
+	.actionBtn,
+	.closeBtn {
+		@extend %btn-reset;
+
+		padding: variables.size(s);
+	}
+
+	.actionBtn {
+		font-size: variables.typography(label, m);
+		font-weight: variables.font-weight(bold);
+	}
+
+	.closeBtn {
+		font-size: variables.typography(label, xxs);
+		font-weight: variables.font-weight(bold);
+		text-transform: uppercase;
+	}
+}

@@ -15,6 +15,15 @@ $_heading: (
 	xxl: 28px
 );
 
+// Label
+$_label: (
+	xxs: 10px,
+	xs: 12px,
+	s: 14px,
+	m: 16px,
+	l: 18px
+);
+
 // Paragraph
 $_paragraph: (
 	xs: 12px,
@@ -26,6 +35,7 @@ $_paragraph: (
 
 $_typography: (
 	heading: $_heading,
+	label: $_label,
 	paragraph: $_paragraph
 );
 

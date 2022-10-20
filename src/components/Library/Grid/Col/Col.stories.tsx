@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Grid, Col as ColComponent } from '..';
 
 export default {
-	title: 'UI/Grid',
+	title: 'Library/Grid',
 	argTypes: {
 		sm: {
 			description: 'The column behavior from sm size onwards',
