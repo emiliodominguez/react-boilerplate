@@ -2,7 +2,7 @@ import { RefObject, useState } from 'react';
 import { useEventListener } from '../useEventListener';
 
 /**
- * When user clicks on somewhere this hook checks if this click happened inside a ref or not.
+ * When a user clicks somewhere checks if the event was triggered within the target element or not
  */
 export function useClickOutside<ElementType extends HTMLElement>(ref: RefObject<ElementType>, callback?: () => void): boolean {
 	const [isOutside, setIsOutside] = useState<boolean>(false);

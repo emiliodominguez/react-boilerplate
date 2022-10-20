@@ -5,10 +5,19 @@
 -   [General overview](#general-overview)
 -   [Project structure](#project-structure)
 -   [Available scripts](#available-scripts)
+-   [UI components](#ui-components)
+-   [Hooks](#hooks)
+-   [Styles](#styles)
+-   [Helpers](#helpers)
+    -   [Common](#common)
+
+<br>
 
 ## General overview
 
-The project was bootstrapped by using `Create React App` and `Yarn`, if eventually `npm` is needed, `yarn.lock` file should be deleted. Once the `npm i` command is executed a `package-lock` file will be generated automatically.
+The project was bootstrapped by using `Create React App` and `Yarn` (with `Typescript`), if eventually `npm` is needed, `yarn.lock` file should be deleted. Once the `npm i` command is executed a `package-lock` file will be generated automatically.
+
+<br>
 
 ## Project structure
 
@@ -22,12 +31,15 @@ Besides those files this is a detailed view of the main project structure.
     └── public              # The public folder
     └── src                 # The source files folder
     │   └── components      # Application components
-    │   │   └──App          # The main entry component
-    │   └── hooks           # Application hooks
-    │   └── styles          # Application styles
-    │   └── helpers         # Application helpers
+    │   │   └── App         # The main entry component
+    │   │   └── Library     # The UI library components folder (See UI Components section)
+    │   └── hooks           # Application hooks (See Hooks section)
+    │   └── styles          # Application styles (See Styles section)
+    │   └── helpers         # Application helpers (See Helpers section)
     │   └── ...
     └── ...                 # Project files
+
+<br>
 
 ## Available scripts
 
@@ -66,3 +78,99 @@ There are more scripts listed within the `package.json` file, but these are the 
     Open <a target="_blank" href="http://localhost:6006/">http://localhost:6006/</a> to view it in the browser.
 </p>
 </details>
+
+<br>
+
+## UI components
+
+A set of the commonly used components, all custom made, each including its own story for visual testing purposes.
+
+These are the ones available:
+
+-   Grid (includes Col)
+-   Select
+-   Toast
+
+<br>
+
+## Hooks
+
+A set of commonly used (at least for me 😄), documented and tested hooks.
+
+`useEventListener`: Sets and removes event listeners
+
+`useClickOutside`: When a user clicks somewhere checks if the event was triggered within the target element or not
+
+`useFetch`: A hook to handle requests
+
+`useWindowWidth`: Checks if the window size matches any given width
+
+<br>
+
+## Styles
+
+TBD
+
+<br>
+
+## Helpers
+
+A set of commonly used (again...at least for me 😄), documented and tested functions.
+
+### Common
+
+`className`:
+A helper function to handle class names easily
+
+`getFromObjectByKeys`:
+Gets a nested (or not) value by its key
+
+---
+
+### Colors
+
+`rgbToHex`:
+Converts a RGB color to hexadecimal
+
+`hexToRgb`:
+Converts an hexadecimal color to RGB
+
+`getContrastColor`:
+Gets the contrast color of a base color
+
+`generateColorScale`:
+Generates a color scale from a single color
+
+---
+
+### Math
+
+`clamp`: Clamps a number between min and max values
+
+`normalize`: Normalizes a value
+
+`linearRegression`: The simple linear regression is a predictive algorithm that provides a linear relationship between one input (x) and a predicted result (y)
+
+---
+
+### Strings
+
+`slugify`: Creates a slug from a string
+
+`capitalize`: Capitalizes a string
+
+`camelCase`: Converts a regular string to camel case
+
+`replaceAll`: Returns a new string with all matches of a pattern replaced by a replacement
+
+`generateRandomHash`: Generates a random hash
+
+---
+
+### Type utilities
+
+`NestedKeyOf`: Allows typing the keys of an object independently of its nesting level
+
+`NestedPick`: Allows picking keys of an object independently of its nesting level
+
+<br>

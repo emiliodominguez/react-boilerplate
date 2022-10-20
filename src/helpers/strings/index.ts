@@ -17,6 +17,7 @@ export function slugify(string: string): string {
 }
 
 /**
+ * Capitalizes a string
  * @param string - The string
  * @returns A capitalized string
  */

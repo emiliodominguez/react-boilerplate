@@ -54,7 +54,7 @@ export function getContrastColor(color: string, darkColor?: string, lightColor?:
 }
 
 /**
- * Generates a color scale based on one color
+ * Generates a color scale from a single color
  * @param colorHex The HEX color
  * @param steps The amount of steps
  * @returns The color scale

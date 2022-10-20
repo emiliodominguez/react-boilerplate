@@ -10,7 +10,7 @@ const breakpoints = Object.freeze({
 });
 
 /**
- * Checks if the window matches any given width
+ * Checks if the window size matches any given width
  * @param width The window width
  */
 export function useWindowWidth(width: keyof typeof breakpoints): boolean {
