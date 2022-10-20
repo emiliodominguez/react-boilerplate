@@ -1,0 +1,116 @@
+@use '@app/styles/variables';
+@use '@app/styles/shared';
+
+$border-size: 1px;
+$toggler-size: variables.size(s);
+$selected-indicator-size: variables.size(m);
+
+.select {
+	position: relative;
+	width: 100%;
+
+	&.open {
+		.toggler {
+			border-bottom-color: transparent;
+
+			&::after {
+				margin-top: $toggler-size * -0.75;
+				transform: translateY(variables.size(xs)) rotate(45deg);
+			}
+		}
+	}
+
+	button,
+	input {
+		width: 100%;
+		padding: variables.size(s);
+		text-align: left;
+		background-color: transparent;
+		font-size: variables.size(m);
+		border: none;
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.toggler,
+.options {
+	background-color: var(--white);
+	border: $border-size solid var(--black);
+}
+
+.toggler {
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: variables.size(m);
+		width: $toggler-size;
+		height: $toggler-size;
+		border: $border-size solid var(--black);
+		border-bottom-color: transparent;
+		border-right-color: transparent;
+		transform-origin: center;
+		margin-top: $toggler-size * -0.25;
+		transform: translateY(variables.size(xs) * -1) rotate(225deg);
+		z-index: variables.z-index(basic);
+	}
+
+	button,
+	input {
+		padding-right: $toggler-size * 2 + variables.size(m);
+	}
+}
+
+.options {
+	@include shared.custom-scrollbar;
+
+	position: absolute;
+	top: calc(100% - #{$border-size});
+	left: 0;
+	width: 100%;
+	list-style: none;
+	max-height: 350px;
+	overflow-y: auto;
+	border-top-width: 0;
+	z-index: variables.z-index(low);
+}
+
+.option {
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: variables.size(i);
+		width: $selected-indicator-size;
+		height: $selected-indicator-size;
+		border: $border-size solid var(--black);
+		transform: translateY(-50%);
+		pointer-events: none;
+	}
+
+	&::after {
+		opacity: 0;
+		background-color: var(--black);
+		transition: opacity ease 250ms;
+	}
+
+	&.selected {
+		&::after {
+			opacity: 1;
+		}
+	}
+
+	button {
+		$offset: variables.size(xs);
+
+		line-height: 1.5;
+		padding-left: variables.size(s) * 2 + $selected-indicator-size + $offset;
+	}
+}
