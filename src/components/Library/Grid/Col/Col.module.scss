@@ -1,0 +1,29 @@
+@use '@app/styles/variables';
+
+.col {
+	grid-column: span 12;
+
+	&.sm {
+		@media #{variables.media-query(min, sm)} {
+			grid-column: span var(--col-sm);
+		}
+	}
+
+	&.md {
+		@media #{variables.media-query(min, md)} {
+			grid-column: span var(--col-md);
+		}
+	}
+
+	&.lg {
+		@media #{variables.media-query(min, lg)} {
+			grid-column: span var(--col-lg);
+		}
+	}
+
+	&.xl {
+		@media #{variables.media-query(min, xl)} {
+			grid-column: span var(--col-xl);
+		}
+	}
+}

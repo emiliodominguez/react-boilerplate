@@ -1,0 +1,7 @@
+@use '@app/styles/variables';
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	align-items: flex-start;
+}
