@@ -32,26 +32,4 @@ describe('Math helpers', () => {
 			expect(firstResult).toEqual(0.5);
 		});
 	});
-
-	describe('linearRegression', () => {
-		test('should predict a value based on the provided set of data', () => {
-			// Given
-			const expenses = [
-				{ month: 1, expense: 1000 },
-				{ month: 2, expense: 2000 },
-				{ month: 3, expense: 3000 }
-			];
-
-			// When
-			const predict = helpers.linearRegression(expenses, 'month', 'expense');
-			const firstPrediction = predict(4);
-			const secondPrediction = predict(5);
-			const thirdPrediction = predict(8);
-
-			// Then
-			expect(firstPrediction).toEqual(4000);
-			expect(secondPrediction).toEqual(5000);
-			expect(thirdPrediction).toEqual(8000);
-		});
-	});
 });

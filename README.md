@@ -55,7 +55,7 @@ There are more scripts listed within the `package.json` file, but these are the 
 <summary><code>yarn install</code></summary>
 <p style="font-size: 14px; padding: 5px 0 0 10px">
 	Installs project dependencies.<br>
-	<small><b>Note:</b> Might need to add <code>--legacy-peer-deps</code> flag for CRACO. Currently configured by using the <code>.npmrc</code> file.</small>
+	<b>Note:</b> Might need to add <code>--legacy-peer-deps</code> flag for CRACO. Currently configured by using the <code>.npmrc</code> file.
 </p>
 </details>
 
@@ -192,8 +192,6 @@ Seven days from today's date
 `clamp`: Clamps a number between min and max values
 
 `normalize`: Normalizes a value
-
-`linearRegression`: The simple linear regression is a predictive algorithm that provides a linear relationship between one input (x) and a predicted result (y)
 
 ---
 
