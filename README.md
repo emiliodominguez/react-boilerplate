@@ -6,10 +6,16 @@
 -   [Project structure](#project-structure)
 -   [Available scripts](#available-scripts)
 -   [UI components](#ui-components)
--   [Hooks](#hooks)
--   [Styles](#styles)
 -   [Helpers](#helpers)
     -   [Common](#common)
+    -   [Colors](#colors)
+    -   [Date](#date)
+    -   [Math](#math)
+    -   [Strings](#strings)
+    -   [Type utilities](#type-utilities)
+-   [Hooks](#hooks)
+-   [Services](#services)
+-   [Styles](#styles)
 
 <br>
 
@@ -26,16 +32,16 @@ Besides those files this is a detailed view of the main project structure.
 
     .
     └── .husky              # Husky configuration files
-    └── .storybook          # The storybook configuration files
+    └── .storybook          # Storybook configuration files
     └── .vscode             # VS Code configuration files
-    └── public              # The public folder
-    └── src                 # The source files folder
+    └── public              # Static files folder
+    └── src                 # Source files folder
     │   └── components      # Application components
-    │   │   └── App         # The main entry component
-    │   │   └── Library     # The UI library components folder (See UI Components section)
+    │   │   └── App         # Main entry component
+    │   │   └── Library     # UI library components (See UI Components section)
+    │   └── helpers         # Application helpers (See Helpers section)
     │   └── hooks           # Application hooks (See Hooks section)
     │   └── styles          # Application styles (See Styles section)
-    │   └── helpers         # Application helpers (See Helpers section)
     │   └── ...
     └── ...                 # Project files
 
@@ -95,8 +101,6 @@ These are the ones available:
 
 ## Hooks
 
-A set of commonly used (at least for me 😄), documented and tested hooks.
-
 `useEventListener`: Sets and removes event listeners
 
 `useClickOutside`: When a user clicks somewhere checks if the event was triggered within the target element or not
@@ -107,6 +111,12 @@ A set of commonly used (at least for me 😄), documented and tested hooks.
 
 <br>
 
+## Services
+
+TBD
+
+<br>
+
 ## Styles
 
 TBD
@@ -114,8 +124,6 @@ TBD
 <br>
 
 ## Helpers
-
-A set of commonly used (again...at least for me 😄), documented and tested functions.
 
 ### Common
 
@@ -140,6 +148,42 @@ Gets the contrast color of a base color
 
 `generateColorScale`:
 Generates a color scale from a single color
+
+---
+
+### Date
+
+`getDateFrom`
+Gets a date from today until any given amount of days
+
+`daysBetweenDates`
+Gets a range of date between two dates
+
+`getDatesInRange`
+Gets an array of dates within a range
+
+`getWeekDates`
+Gets both the start and end days of a week
+
+#### Constants
+
+`today`
+Today's date
+
+`oneDayMS`
+A day in milliseconds
+
+`yesterday`
+Yesterday's date
+
+`tomorrow`
+Tomorrow's date
+
+`twoDaysFromToday`
+Two days from today's date
+
+`sevenDaysFromToday`
+Seven days from today's date
 
 ---
 
