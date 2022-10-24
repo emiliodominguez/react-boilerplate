@@ -1,3 +1,5 @@
+import 'reflect-metadata';
+import '../src/ioc/bindings';
 import '../src/styles/main.scss';
 
 export const parameters = {

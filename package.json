@@ -20,9 +20,12 @@
 	},
 	"dependencies": {
 		"@craco/craco": "^6.4.5",
+		"inversify": "^6.0.1",
+		"inversify-react": "^1.0.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-scripts": "5.0.1",
+		"reflect-metadata": "^0.1.13",
 		"typescript": "^4.8.4",
 		"web-vitals": "^2.1.4"
 	},
