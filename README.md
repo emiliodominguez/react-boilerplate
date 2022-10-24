@@ -6,6 +6,10 @@
 -   [Project structure](#project-structure)
 -   [Available scripts](#available-scripts)
 -   [UI components](#ui-components)
+-   [Hooks](#hooks)
+-   [Dependency injection](#dependency-injection)
+-   [Services](#services)
+-   [Styles](#styles)
 -   [Helpers](#helpers)
     -   [Common](#common)
     -   [Colors](#colors)
@@ -13,9 +17,6 @@
     -   [Math](#math)
     -   [Strings](#strings)
     -   [Type utilities](#type-utilities)
--   [Hooks](#hooks)
--   [Services](#services)
--   [Styles](#styles)
 
 <br>
 
@@ -41,6 +42,7 @@ Besides those files this is a detailed view of the main project structure.
     │   │   └── Library     # UI library components (See UI Components section)
     │   └── helpers         # Application helpers (See Helpers section)
     │   └── hooks           # Application hooks (See Hooks section)
+    │   └── ioc             # Application IOC configuration (See Dependency injection section)
     │   └── styles          # Application styles (See Styles section)
     │   └── ...
     └── ...                 # Project files
@@ -101,19 +103,30 @@ These are the ones available:
 
 ## Hooks
 
-`useEventListener`: Sets and removes event listeners
+`useEventListener`:
+Sets and removes event listeners
 
-`useClickOutside`: When a user clicks somewhere checks if the event was triggered within the target element or not
+`useClickOutside`:
+When a user clicks somewhere checks if the event was triggered within the target element or not
 
-`useFetch`: A hook to handle requests
+`useFetch`:
+A hook to handle requests
 
-`useWindowWidth`: Checks if the window size matches any given width
+`useWindowWidth`:
+Checks if the window size matches any given width
+
+<br>
+
+## Dependency injection
+
+TBD
 
 <br>
 
 ## Services
 
-TBD
+`http`:
+Exposes several resolvers to handle the most basic HTTP methods in a simpler way
 
 <br>
 
@@ -189,30 +202,39 @@ Seven days from today's date
 
 ### Math
 
-`clamp`: Clamps a number between min and max values
+`clamp`:
+Clamps a number between min and max values
 
-`normalize`: Normalizes a value
+`normalize`:
+Normalizes a value
 
 ---
 
 ### Strings
 
-`slugify`: Creates a slug from a string
+`slugify`:
+Creates a slug from a string
 
-`capitalize`: Capitalizes a string
+`capitalize`:
+Capitalizes a string
 
-`camelCase`: Converts a regular string to camel case
+`camelCase`:
+Converts a regular string to camel case
 
-`replaceAll`: Returns a new string with all matches of a pattern replaced by a replacement
+`replaceAll`:
+Returns a new string with all matches of a pattern replaced by a replacement
 
-`generateRandomHash`: Generates a random hash
+`generateRandomHash`:
+Generates a random hash
 
 ---
 
 ### Type utilities
 
-`NestedKeyOf`: Allows typing the keys of an object independently of its nesting level
+`NestedKeyOf`:
+Allows typing the keys of an object independently of its nesting level
 
-`NestedPick`: Allows picking keys of an object independently of its nesting level
+`NestedPick`:
+Allows picking keys of an object independently of its nesting level
 
 <br>
