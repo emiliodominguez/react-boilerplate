@@ -13,7 +13,6 @@
 -   [Helpers](#helpers)
     -   [Common](#common)
     -   [Colors](#colors)
-    -   [Date](#date)
     -   [Math](#math)
     -   [Strings](#strings)
     -   [Type utilities](#type-utilities)
@@ -37,13 +36,14 @@ Besides those files this is a detailed view of the main project structure.
     └── .vscode             # VS Code configuration files
     └── public              # Static files folder
     └── src                 # Source files folder
-    │   └── components      # Application components
+    │   └── components      # Components folder
     │   │   └── App         # Main entry component
     │   │   └── Library     # UI library components (See UI Components section)
-    │   └── helpers         # Application helpers (See Helpers section)
-    │   └── hooks           # Application hooks (See Hooks section)
-    │   └── ioc             # Application IOC configuration (See Dependency injection section)
-    │   └── styles          # Application styles (See Styles section)
+    │   └── helpers         # Helpers (See Helpers section)
+    │   └── hooks           # Hooks (See Hooks section)
+    │   └── ioc             # IOC configuration (See Dependency injection section)
+    │   └── services        # Services (See Services section)
+    │   └── styles          # Global styles and helpers (See Styles section)
     │   └── ...
     └── ...                 # Project files
 
@@ -128,6 +128,9 @@ TBD
 `http`:
 Exposes several resolvers to handle the most basic HTTP methods in a simpler way
 
+`date`:
+Handles several different date operations and exposes useful date properties
+
 <br>
 
 ## Styles
@@ -161,42 +164,6 @@ Gets the contrast color of a base color
 
 `generateColorScale`:
 Generates a color scale from a single color
-
----
-
-### Date
-
-`getDateFrom`
-Gets a date from today until any given amount of days
-
-`daysBetweenDates`
-Gets a range of date between two dates
-
-`getDatesInRange`
-Gets an array of dates within a range
-
-`getWeekDates`
-Gets both the start and end days of a week
-
-#### Constants
-
-`today`
-Today's date
-
-`oneDayMS`
-A day in milliseconds
-
-`yesterday`
-Yesterday's date
-
-`tomorrow`
-Tomorrow's date
-
-`twoDaysFromToday`
-Two days from today's date
-
-`sevenDaysFromToday`
-Seven days from today's date
 
 ---
 

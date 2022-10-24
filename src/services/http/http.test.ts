@@ -34,7 +34,7 @@ describe('HTTP service tests', () => {
 		return message;
 	}
 
-	describe('GET method', () => {
+	describe('get', () => {
 		test('should get data on resolve', async () => {
 			// Given
 			const mockedResponse = mockFetchResolve<string>('Success!');
@@ -60,7 +60,7 @@ describe('HTTP service tests', () => {
 		});
 	});
 
-	describe('POST method', () => {
+	describe('post', () => {
 		const payload = { firstName: 'Lorem', lastName: 'Ipsum' };
 
 		test('should post data on resolve', async () => {
@@ -88,7 +88,7 @@ describe('HTTP service tests', () => {
 		});
 	});
 
-	describe('PUT method', () => {
+	describe('put', () => {
 		const payload = { firstName: 'Lorem', lastName: 'Ipsum' };
 
 		test('should post data on resolve', async () => {
@@ -118,7 +118,7 @@ describe('HTTP service tests', () => {
 		});
 	});
 
-	describe('DELETE method', () => {
+	describe('delete', () => {
 		test('should get data on resolve', async () => {
 			// Given
 			const mockedResponse = mockFetchResolve<string>('Success!');

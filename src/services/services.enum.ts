@@ -1,3 +1,4 @@
 export enum Services {
-	HttpService = 'HttpService'
+	HttpService = 'HttpService',
+	DateService = 'DateService'
 }
