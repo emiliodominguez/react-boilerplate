@@ -1,4 +1,4 @@
-import { render, renderHook, waitFor } from '@testing-library/react';
+import { renderHook, waitFor } from '@testing-library/react';
 import { useFetch } from '.';
 
 interface IToDo {
@@ -11,13 +11,11 @@ interface IToDo {
 describe('useFetch', () => {
 	const testUrl = 'https://jsonplaceholder.typicode.com/todos/1';
 
-	// eslint-disable-next-line require-jsdoc
-	function TestComponent(): JSX.Element {
-		useFetch<IToDo>(testUrl);
-		return <></>;
-	}
-
 	afterEach(() => {
+		jest.restoreAllMocks();
+	});
+
+	afterAll(() => {
 		jest.clearAllMocks();
 	});
 
@@ -64,7 +62,7 @@ describe('useFetch', () => {
 
 	test('should instantiate an AbortController and call it when cleaning up', async () => {
 		// Given
-		const { unmount } = render(<TestComponent />);
+		const { unmount } = renderHook(() => useFetch<IToDo>(testUrl));
 		const abortSpy = jest.spyOn(AbortController.prototype, 'abort');
 
 		abortSpy.mockImplementationOnce(jest.fn);

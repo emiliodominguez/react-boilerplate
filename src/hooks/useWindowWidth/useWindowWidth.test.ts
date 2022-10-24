@@ -15,6 +15,10 @@ describe('useWindowWidth', () => {
 		});
 	});
 
+	afterAll(() => {
+		jest.clearAllMocks();
+	});
+
 	test('should register a window size event listener', () => {
 		// Given
 		const useEventListenerSpy = jest.spyOn(useEventListenerHook, 'useEventListener');
